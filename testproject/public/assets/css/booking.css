@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.booking-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h1 {
+    text-align: center;
+    color: #333;
+}
+
+.booking-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Additional CSS for other form fields goes here */

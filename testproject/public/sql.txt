@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS Student (
+    Regno INT PRIMARY KEY,
+    Name VARCHAR(255),
+    PhoneNumber VARCHAR(15),
+    Address VARCHAR(255),
+    InterestedSubject VARCHAR(255)
+);

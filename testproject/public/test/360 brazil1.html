@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelscape - 360-Degree Image Viewer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+        integrity="sha512-UoT/Ca6+2kRekuB1IDZgwtDt0ZUfsweWmyNhMqhG4hpnf7sFnhrLrO0zHJr2vFp7eZEvJ3FN58dhVx+YMJMt2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #417bb5;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #365f85; /* Darker shade for hover */
+        }
+
+        #panorama-360-view {
+            width: 80vw;
+            height: 65vh;
+            border: 3px solid #4276aa;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #description-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #a6e1fe;
+            color: #4276aa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        #description-container:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .description-heading {
+            font-size: 28px;
+            color: #4276aa;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .description-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .logo, .logo:hover, .logo:focus {
+            color: #fff;
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .logo span {
+            color: #00d8ff;
+        }
+    </style>
+</head>
+<body>
+
+<header class="logo">
+    Travel<span>scape</span>
+</header>
+
+<div id="panorama-360-view"></div>
+
+<div id="description-container">
+    <h2 class="description-heading">Rio de Janeiro Statue</h2>
+    <p class="description-text">
+        The iconic statue of Christ the Redeemer in Rio de Janeiro stands atop the Corcovado mountain and is one of the New Seven Wonders of the World. This monumental statue, completed in 1931, symbolizes the welcoming and embracing nature of the city. It overlooks the vibrant streets, beautiful beaches, and lush landscapes, offering a breathtaking view of Rio de Janeiro's unique charm.
+    </p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"
+        integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    pannellum.viewer('panorama-360-view', {
+        "type": "equirectangular",
+        "panorama": "https://i.postimg.cc/x8rgmpzz/rio.png",
+        "autoLoad": true
+    });
+</script>
+
+</body>
+</html>

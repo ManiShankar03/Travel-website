@@ -1,0 +1,390 @@
+<!Doctype html>
+<html class="no-js"  lang="en">
+
+	<head>
+		<!-- META DATA -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!--font-family-->
+		
+		<title>Payment success</title>
+
+		<!-- favicon img -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+		<!--font-awesome.min.css-->
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--animate.css-->
+		<link rel="stylesheet" href="assets/css/animate.css" />
+
+		<!--hover.css-->
+		<link rel="stylesheet" href="assets/css/hover-min.css">
+
+		<!--datepicker.css-->
+		<link rel="stylesheet"  href="assets/css/datepicker.css" >
+		<link rel='stylesheet' href="assets/css/usermenu.css">
+
+		<!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+
+		<!-- range css-->
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+		<!--bootstrap.min.css-->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css"/>
+
+		<!--style.css-->
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!--responsive.css-->
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/button.css">
+
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>/* CSS */
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+body {
+    background-color:lightblue; /* Path to your background image */
+    background-size: cover; /* Cover the entire area of the page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+.success-container {
+            margin-top: 50px;
+            text-align: center;
+            background-color:white;
+            width:35%;
+            padding:20px;
+        }
+ .dashboard-link {
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* No underline */
+            font-weight: bold; /* Bold font */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            display: inline-block; /* Ensures the layout is consistent */
+            border: none; /* No border */
+        }
+.dashboard-link:hover, .dashboard-link:focus, .dashboard-link:active {
+            background-color: #0056b3; /* Darker blue on hover/focus/active */
+            color: white; /* White text on hover/focus/active */
+            outline: none; /* Removes outline on focus */
+        }
+
+.link container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Center the links vertically */
+    gap: 10px; /* Optional: adds space between the links */
+}
+.links-container {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align the links vertically */
+}
+
+.link-button {
+    background-color: #4CAF50;
+    height: 30px;
+    width: 130px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px; /* Adds a little space between the buttons */
+    text-decoration: none; /* Removes the underline from the links */
+}
+      
+</style>
+
+     
+		
+	</head>
+	
+	<body>
+		<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+			your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+
+		<!-- main-menu Start -->
+		<header class="top-area">
+			<div class="header-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2">
+							<div class="logo">
+								<a href="index.html">
+									Travel<span>Scape</span>
+								</a>
+							</div><!-- /.logo-->
+						</div><!-- /.col-->
+						<div class="col-sm-10">
+							<div class="main-menu">
+							
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+										<i class="fa fa-bars"></i>
+									</button><!-- / button-->
+								</div><!-- /.navbar-header-->
+								<div class="collapse navbar-collapse">		  
+									<ul class="nav navbar-nav navbar-right">
+										<li class="smooth-menu"><a href="#details">Payment status</a></li>
+										
+										
+										
+										<li>
+										                                              <button class="book-btn" id="userMenuButton">Welcome ${req.session.username}</button>
+<div id="userMenu" class="user-menu" style="display: none;">
+    <ul>
+        <li id="dashboard">Dashboard</li>
+        <li id="logout">Logout</li>
+    </ul>
+</div>
+</li>
+</ul>
+										
+										
+									
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.main-menu-->
+						</div><!-- /.col-->
+					
+					<div class="home-border"></div><!-- /.home-border-->
+				</div><!-- /.container-->
+			</div><!-- /.header-area -->
+
+		</header><!-- /.top-area-->
+		<body>
+		<!-- Form Section Start -->
+
+
+
+        
+    <!-- partial:index.partial.html -->
+ <section id="details" class="section-padding" >
+<div class="container success-container" >
+    <h2 styling="padding:30px; ">Payment Successful </h2>
+    <h4 id="totalPriceDisplay" style="padding:20px;">Total Price Paid: $0</h4>
+   
+<div class="links-container">
+    <a href="/dashboard" class="link-button">Visit Dashboard</a>
+    <a href="/invoice" class="link-button">Your Invoice</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- Form Section End -->
+
+</body>	
+<footer  class="footer-copyright">
+			<div class="container">
+				<div class="footer-content">
+					<div class="row">
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<div class="footer-logo">
+									<a href="index.html">
+										tour<span>Nest</span>
+									</a>
+									<p>
+										best travel agency
+									</p>
+								</div>
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<h2>link</h2>
+								<div class="single-footer-txt">
+									<p><a href="#">home</a></p>
+									<p><a href="#">destination</a></p>
+									<p><a href="#">spacial packages</a></p>
+									<p><a href="#">special offers</a></p>
+									<p><a href="#">blog</a></p>
+									<p><a href="#">contacts</a></p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<h2>popular destination</h2>
+								<div class="single-footer-txt">
+									<p><a href="#">china</a></p>
+									<p><a href="#">venezuela</a></p>
+									<p><a href="#">brazil</a></p>
+									<p><a href="#">australia</a></p>
+									<p><a href="#">london</a></p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item text-center">
+								<h2 class="text-left">contacts</h2>
+								<div class="single-footer-txt text-left">
+									<p>+1 (300) 1234 6543</p>
+									<p class="foot-email"><a href="#">info@tnest.com</a></p>
+									<p>North Warnner Park 336/A</p>
+									<p>Newyork, USA</p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+
+				</div><!--/.footer-content-->
+				<hr>
+				<div class="foot-icons ">
+					<ul class="footer-social-links list-inline list-unstyled">
+		                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+		                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+		                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+		        	</ul>
+		        	<p>&copy; 2024 <a href="index.html">TravelScape</a>. All Right Reserved</p>
+
+		        </div><!--/.foot-icons-->
+				<div id="scroll-Top">
+					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div><!--/.scroll-Top-->
+			</div><!-- /.container-->
+
+		</footer><!-- /.footer-copyright-->
+		<!-- footer-copyright end -->
+
+
+
+
+		<script src="assets/js/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+		<!--modernizr.min.js-->
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+		<!--bootstrap.min.js-->
+		<script  src="assets/js/bootstrap.min.js"></script>
+
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+		<!-- jquery.filterizr.min.js -->
+		<script src="assets/js/jquery.filterizr.min.js"></script>
+
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+		<!--jquery-ui.min.js-->
+        <script src="assets/js/jquery-ui.min.js"></script>
+
+        <!-- counter js -->
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+
+		<!--owl.carousel.js-->
+        <script  src="assets/js/owl.carousel.min.js"></script>
+
+        <!-- jquery.sticky.js -->
+		<script src="assets/js/jquery.sticky.js"></script>
+
+        <!--datepicker.js-->
+        <script  src="assets/js/datepicker.js"></script>
+
+		<!--Custom JS-->
+		<script src="assets/js/custom.js"></script>
+		<script src="assets/js/searchdestinations.js"></script>
+		<script src="assets/js/cancelbutton.js"></script>
+		<script src="assets/js/usermenu.js"></script>
+		
+		
+		
+    
+
+		<script>
+     document.addEventListener('DOMContentLoaded', function() {
+    var userMenuButton = document.getElementById('userMenuButton');
+    var emailDisplayElement = document.getElementById('emailDisplay'); 
+
+     
+    fetch('/get-username')
+        .then(response => response.json())
+        .then(data => {
+            if (data.username) {
+                var username = data.username;
+                userMenuButton.textContent = 'Welcome ' + username;
+
+                // Get the computed style of the button
+                var buttonStyle = window.getComputedStyle(userMenuButton);
+
+                // Calculate width based on content and existing padding
+                userMenuButton.style.width = 'auto'; // First set to auto to get natural size
+                var contentWidth = userMenuButton.offsetWidth; // Natural size
+                var totalPadding = parseFloat(buttonStyle.paddingLeft) + parseFloat(buttonStyle.paddingRight);
+
+                userMenuButton.style.width = (contentWidth + totalPadding) + 'px';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+      
+});
+
+          
+window.onload = function() {
+        var totalPrice = sessionStorage.getItem('totalPrice') || '0';
+        document.getElementById('totalPriceDisplay').textContent = 'Total Price Paid: $' + totalPrice;
+    };
+   fetch('/create-booking', {
+   method: 'POST',
+   headers:
+{
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({
+totalPrice: sessionStorage.getItem('totalPrice'),
+
+departurePoint: sessionStorage.getItem('departureCountry'),
+arrivalPoint: sessionStorage.getItem('arrivalCountry'),
+dateOfJourney: sessionStorage.getItem('dateRangeSelect')
+})
+});
+
+
+</script>
+   
+
+		
+
+</body>
+</html>
+

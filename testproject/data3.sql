@@ -1,0 +1,75 @@
+create database cat3;
+use cat3;
+select * from client (1);
+select * from countryy;
+delete from countryy where cid='cid';
+select * from test;
+desc test;
+alter table test add primary key(ClientId(30));
+desc test;
+alter table countryy add primary key(cid(30));
+drop table countryy;
+alter table test modify cid VARCHAR(30);
+ALTER TABLE COUNTRYY MODIFY cid VARCHAR(30);
+alter table test add foreign key(cid)references countryy(cid);
+desc test;
+desc countryy;
+describe test;
+show columns from test;
+select * from countryy;
+SELECT * FROM countryy c natural join test t ;
+use lab3;
+select * from events;
+update events set event_prize=10000 where event_id=201;
+select event_type,min(event_prize) from events group by(event_type) order by  avg(event_prize) desc;
+create database newdatabase;
+use newdatabase;
+desc test;
+alter table test add primary key(ClientID(30));
+desc test;
+alter table countryy add primary key(cid(30));
+desc countryy;
+alter table test add foreign key(cid) references countryy(cid);
+alter table countryy modify cid varchar(30);
+use fullstack;
+select * from booking;
+use fullstack;
+select * from destination;
+select * from hotel;
+desc flight;
+select * from flight;
+delete from destination where destination_id="D14";
+desc flight;
+select * from extraexpense;
+desc users;
+alter table users modify email varchar(50);
+desc activities;
+select * from actvities;
+use fullstack;
+select * from users;
+delete from users where email="mani2shankar1@gmail.com";
+alter table booking modify email varchar(50);
+select * from booking;
+delete from users where email="usha@gmail.com";
+insert into users values('usha','usha@gmail.com','usha');
+select * from activities;
+alter table activities drop column description;
+use fullstack;
+select * from users;
+select * from booking;
+select * from countries;
+select * from destination;
+select * from extraexpense;
+select * from flight;
+select * from hotel;
+select * from users;
+create database mds;
+use mds;
+CREATE TABLE IF NOT EXISTS Student (
+    Regno INT PRIMARY KEY,
+    Name VARCHAR(255),
+    PhoneNumber VARCHAR(15),
+    Address VARCHAR(255),
+    InterestedSubject VARCHAR(255)
+);
+select * from student;
